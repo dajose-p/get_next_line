@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danjose- <danjose-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:19:33 by danjose-          #+#    #+#             */
-/*   Updated: 2025/10/17 19:19:38 by danjose-         ###   ########.fr       */
+/*   Created: 2025/10/17 19:20:58 by danjose-          #+#    #+#             */
+/*   Updated: 2025/10/17 19:21:00 by danjose-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static void	leftovers(char **main_line, char **line)
 {
@@ -67,15 +67,15 @@ static char	*cr_main_line(char *main_line, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	*main_line = NULL;
+	static char	*main_line[1024];
 	char		*line;
 
 	line = NULL;
-	if (fd == -1)
+	if (fd < 0 || fd >= 1024)
 		return (NULL);
-	main_line = cr_main_line(main_line, fd);
-	if (main_line == NULL)
+	main_line[fd] = cr_main_line(main_line[fd], fd);
+	if (main_line[fd] == NULL)
 		return (NULL);
-	leftovers(&main_line, &line);
+	leftovers(&main_line[fd], &line);
 	return (line);
 }
