@@ -39,12 +39,6 @@ cd get_next_line
 
 ## Usage
 
-Include the header in your project:
-
-```c
-#include "get_next_line.h"
-```
-
 Compile the .c files as it is shown:
 
 ```bash
