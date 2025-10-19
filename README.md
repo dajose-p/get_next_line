@@ -12,7 +12,6 @@ It handles multiple file descriptors simultaneously and returns each line of a f
 - Usage
 - Examples
 - Contributions
-- License
 
 ---
 
