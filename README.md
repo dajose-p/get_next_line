@@ -118,13 +118,9 @@ Third line
 
 ---
 
-## Contributions
+## Contributing
 
-This project is part of the 42 curriculum, so external contributions are not accepted.  
-However, you can experiment and improve it for learning purposes.
+This project is primarily for personal use in **42 school** projects.  
+Contributions are welcome in the form of suggestions or improvements for function implementations.
 
 ---
-
-## License
-
-This project is free for educational use. All rights to the original code belong to its author.
