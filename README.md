@@ -31,17 +31,9 @@ It handles multiple file descriptors simultaneously and returns each line of a f
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/get_next_line.git
+git clone https://github.com/dajose-p/get_next_line.git
 cd get_next_line
 ```
-
-2. Compile the library:
-
-```bash
-make
-```
-
-This will generate `libftgnl.a` (if you created a library) or object files for linking.
 
 ---
 
@@ -53,16 +45,11 @@ Include the header in your project:
 #include "get_next_line.h"
 ```
 
-Compile your program with the library:
+Compile the .c files as it is shown:
 
 ```bash
-cc main.c -L. -lftgnl -o my_program
-```
-
-Or compile directly with the object files:
-
-```bash
-cc main.c get_next_line.c -o my_program
+cc -D BUFFER_SIZE=<size_of_buffer> get_next_line.c get_next_line_utils.c -o my_program
+cc -D BUFFER_SIZE=<size_of_buffer> get_next_line_bonus.c get_next_line_utils_bonus.c -o my_program
 ```
 
 Call the function:
