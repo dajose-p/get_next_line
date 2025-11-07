@@ -6,11 +6,11 @@
 /*   By: danjose- <danjose-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:22:00 by danjose-          #+#    #+#             */
-/*   Updated: 2025/10/17 19:22:02 by danjose-         ###   ########.fr       */
+/*   Updated: 2025/11/07 11:56:15 by danjose-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *str)
 {
